@@ -61,7 +61,17 @@ cp -r ~/my-guix-profiles/emacs-project-template/ <project-folder>/emacs/
 
 This gives the project its own Guix-managed Emacs environment that can be started from anywhere via `<project-folder>/emacs/emacs` and supports `--daemon=<name>` for server mode.
 
-### Step 6: Write README.org
+### Step 6: Configure local Claude settings
+
+Create `.claude/settings.local.json` in the new project folder with auto-memory pointed at the project directory (so it syncs via Syncthing):
+
+```json
+{
+  "autoMemoryDirectory": ".claude/memory"
+}
+```
+
+### Step 7: Write README.org
 
 Write a `README.org` file in the new project folder:
 
@@ -71,7 +81,7 @@ Write a `README.org` file in the new project folder:
 <Write a 1-2 sentence description of what this project is about, based on the project name.>
 ```
 
-### Step 7: Confirm
+### Step 8: Confirm
 
 Tell the user:
 - The TODO was added to `~/org/todos.org` under the chosen category

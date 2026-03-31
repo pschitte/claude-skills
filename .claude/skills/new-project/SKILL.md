@@ -1,8 +1,7 @@
 ---
 name: new-project
-description: Create a new org-mode TODO entry and project folder. Use when the user wants to start a new project, add a TODO with a project folder, or says "new project".
-argument-hint: <project description>
-allowed-tools: [Read, Edit, Write, Bash, Glob, Grep, AskUserQuestion]
+description: "Create a new org-mode TODO entry and project folder. Use when the user wants to start a new project, add a TODO with a project folder, or says 'new project'."
+argument-hint: "<project description>"
 ---
 
 # New Project

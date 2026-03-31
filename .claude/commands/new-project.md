@@ -51,7 +51,17 @@ emacs --batch -l ~/my-guix-profiles/emacs/config/.emacs --eval '(nb-new "~/org/p
 
 If this fails, do NOT create the folder manually. Instead, tell the user the folder creation failed and suggest they check their Emacs setup.
 
-### Step 5: Write README.org
+### Step 5: Add emacs environment
+
+Copy the emacs project template into the new project folder:
+
+```bash
+cp -r ~/my-guix-profiles/emacs-project-template/ <project-folder>/emacs/
+```
+
+This gives the project its own Guix-managed Emacs environment that can be started from anywhere via `<project-folder>/emacs/emacs` and supports `--daemon=<name>` for server mode.
+
+### Step 6: Write README.org
 
 Write a `README.org` file in the new project folder:
 
@@ -61,7 +71,7 @@ Write a `README.org` file in the new project folder:
 <Write a 1-2 sentence description of what this project is about, based on the project name.>
 ```
 
-### Step 6: Confirm
+### Step 7: Confirm
 
 Tell the user:
 - The TODO was added to `~/org/todos.org` under the chosen category

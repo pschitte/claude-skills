@@ -1,0 +1,7 @@
+{
+  "servers": {
+    "remarkable": {
+      "command": "remarkable-mcp-server"
+    }
+  }
+}
